@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://stormy-caverns-74158.herokuapp.com//parse"
             })
         )
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController = storyboard.instantiateInitialViewController()
+            window?.rootViewController = homeViewController
+        }
         return true
     }
 
