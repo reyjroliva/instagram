@@ -19,6 +19,7 @@
 		EFF428EF1F0302B300B6E6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF428ED1F0302B300B6E6CA /* LaunchScreen.storyboard */; };
 		EFF428FA1F0302B300B6E6CA /* instagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF428F91F0302B300B6E6CA /* instagramTests.swift */; };
 		EFF429051F0302B300B6E6CA /* instagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF429041F0302B300B6E6CA /* instagramUITests.swift */; };
+		EFFCEBEB1F04246000D622BE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFCEBEA1F04246000D622BE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EFF429001F0302B300B6E6CA /* instagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF429041F0302B300B6E6CA /* instagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramUITests.swift; sourceTree = "<group>"; };
 		EFF429061F0302B300B6E6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFFCEBEA1F04246000D622BE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FF349270CF9F553BAF883DE1 /* Pods-instagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagramTests/Pods-instagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 				EFF428F01F0302B300B6E6CA /* Info.plist */,
 				EFB84FF01F0310A60046E7FF /* LoginViewController.swift */,
 				EFB84FF31F0327C30046E7FF /* HomeViewController.swift */,
+				EFFCEBEA1F04246000D622BE /* ProfileViewController.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				TargetAttributes = {
 					EFF428E01F0302B300B6E6CA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = P533X93YKA;
 						ProvisioningStyle = Automatic;
 					};
 					EFF428F41F0302B300B6E6CA = {
@@ -454,6 +458,7 @@
 			files = (
 				EFB84FF11F0310A60046E7FF /* LoginViewController.swift in Sources */,
 				EFF428E71F0302B300B6E6CA /* ViewController.swift in Sources */,
+				EFFCEBEB1F04246000D622BE /* ProfileViewController.swift in Sources */,
 				EFF428E51F0302B300B6E6CA /* AppDelegate.swift in Sources */,
 				EFB84FF41F0327C30046E7FF /* HomeViewController.swift in Sources */,
 			);
@@ -608,6 +613,7 @@
 			baseConfigurationReference = D6C6D43B16879963A9544657 /* Pods-instagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P533X93YKA;
 				INFOPLIST_FILE = instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rey.instagram;
@@ -621,6 +627,7 @@
 			baseConfigurationReference = 93DE7BE69C9D594046B8C833 /* Pods-instagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P533X93YKA;
 				INFOPLIST_FILE = instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rey.instagram;
