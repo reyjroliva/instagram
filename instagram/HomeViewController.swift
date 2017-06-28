@@ -9,8 +9,13 @@
 import UIKit
 import Parse
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource {
 
+    var posts: [PFObject] = []
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     @IBAction func logoutButton(_ sender: Any) {
         PFUser.logOutInBackground { (error: Error?) in
             print("You're logged out")
@@ -21,9 +26,21 @@ class HomeViewController: UIViewController {
     
     
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedPostCell", for: indexPath) as! feedPostCell
+        
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.delegate = self as? UITableViewDelegate
         // Do any additional setup after loading the view.
     }
 

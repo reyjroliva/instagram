@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBAction func onSignIn(_ sender: Any) {
         PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: Error?) in
             if let error = error {
