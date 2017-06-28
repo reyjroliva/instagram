@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController {
 
+    @IBAction func logoutButton(_ sender: Any) {
+        PFUser.logOutInBackground { (error: Error?) in
+            print("You're logged out")
+            self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+            // PFUser.currentUser() will now be nil
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
