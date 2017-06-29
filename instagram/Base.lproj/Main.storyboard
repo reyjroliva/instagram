@@ -298,6 +298,9 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="0.97998042740000002" green="0.99996114380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="usePost:" destination="Gj7-i0-TgU" eventType="touchUpInside" id="ok4-df-Lhb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
