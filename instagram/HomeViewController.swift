@@ -13,6 +13,7 @@ import ParseUI
 class HomeViewController: UIViewController, UITableViewDataSource {
 
     var posts: [PFObject] = []
+    var refreshControl: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -48,6 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     
     func fetchPosts() {
+        
         let query = PFQuery(className: "Post")
         query.order(byDescending: "createdAt")
         query.includeKey("author")
@@ -57,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             if let posts = posts {
                 self.posts = posts
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
                 //do something with the array of objects returnedby the call
 //                for post in posts {
 //                    //access the object as a dictionary and cast type
@@ -68,13 +71,20 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    func didPullToRefresh(_ refreshControl: UIRefreshControl) {
+        fetchPosts()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(HomeViewController.didPullToRefresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         fetchPosts()
         tableView.dataSource = self
         tableView.delegate = self as? UITableViewDelegate
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
