@@ -191,12 +191,100 @@
                     </tabBar>
                     <connections>
                         <segue destination="jZJ-Ff-nms" kind="relationship" relationship="viewControllers" id="xxm-mJ-MSi"/>
+                        <segue destination="XjW-DL-Prv" kind="relationship" relationship="viewControllers" id="kjJ-Fw-4NT"/>
                         <segue destination="HTf-pg-m4C" kind="relationship" relationship="viewControllers" id="60s-or-svn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgp-6r-u9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="139"/>
+        </scene>
+        <!--Make Post View Controller-->
+        <scene sceneID="DUX-d9-SVu">
+            <objects>
+                <viewController id="t87-Sy-57H" customClass="MakePostViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cY2-af-L2M"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecL-T2-QUZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mgX-n6-Omj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXT-aW-gba">
+                                <rect key="frame" x="137" y="505" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22084645219999999" green="0.55710519820000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                <state key="normal" title="Gallery">
+                                    <color key="titleColor" red="0.97998042740000002" green="0.99996114380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="useGallery:" destination="t87-Sy-57H" eventType="touchUpInside" id="Dv8-Wh-1ua"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xau-kI-fgj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLE-TA-IdE">
+                                <rect key="frame" x="137" y="447" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22084645224547073" green="0.55710519822053606" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.97998042739831082" green="0.99996114378596834" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="useCamera:" destination="t87-Sy-57H" eventType="touchUpInside" id="R9g-vB-PTV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hri-u4-08P">
+                                <rect key="frame" x="137" y="560" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22084645219999999" green="0.55710519820000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.97998042740000002" green="0.99996114380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="useGallery:" destination="t87-Sy-57H" eventType="touchUpInside" id="xaO-xw-YhJ"/>
+                                    <action selector="useNext:" destination="t87-Sy-57H" eventType="touchUpInside" id="Fef-uw-eQI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZFx-qC-Av5"/>
+                    <connections>
+                        <outlet property="photoToPost" destination="Xau-kI-fgj" id="jcO-AB-joo"/>
+                        <outlet property="useCameraButton" destination="zLE-TA-IdE" id="4Tp-tW-D30"/>
+                        <outlet property="useGalleryButton" destination="tXT-aW-gba" id="ScS-0f-UeU"/>
+                        <outlet property="useNextButton" destination="hri-u4-08P" id="DO0-8N-Dkd"/>
+                        <segue destination="Gj7-i0-TgU" kind="presentation" identifier="addCommentSegue" id="uxe-Zm-gji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1d-vN-emW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.60000000000002" y="1745.577211394303"/>
+        </scene>
+        <!--Add Caption View Controller-->
+        <scene sceneID="5X3-s5-gac">
+            <objects>
+                <viewController id="Gj7-i0-TgU" customClass="AddCaptionViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7A1-9B-eFl"/>
+                        <viewControllerLayoutGuide type="bottom" id="krr-7H-FLm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="56R-jz-wXB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHt-BN-SLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="2526"/>
         </scene>
         <!--Profile-->
         <scene sceneID="mQf-w7-9Rq">
@@ -249,6 +337,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6O-YE-csd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1729" y="902"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="jPD-IY-eVU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XjW-DL-Prv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1oJ-J8-lkb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3B-ly-bxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t87-Sy-57H" kind="relationship" relationship="rootViewController" id="8wM-YP-tR1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7W-Y2-71h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="902"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
