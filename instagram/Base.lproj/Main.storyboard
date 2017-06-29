@@ -110,13 +110,6 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-zo-evI">
-                                                    <rect key="frame" x="8" y="413" width="359" height="88"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-lW-1m1">
                                                     <rect key="frame" x="8" y="8" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,13 +117,22 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-zo-evI">
+                                                    <rect key="frame" x="8" y="413" width="359" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="abovePhotoProfileName" destination="bfG-lW-1m1" id="ydO-4a-ftR"/>
                                             <outlet property="belowPhotoProfileName" destination="0C0-n5-SCZ" id="NiO-sy-1CX"/>
                                             <outlet property="feedCaption" destination="s2X-zo-evI" id="Lht-cs-eqd"/>
                                             <outlet property="feedPhoto" destination="fKE-B1-PB4" id="oGx-46-oWd"/>
+                                            <segue destination="wbW-Xr-5D5" kind="show" id="Ib8-Vd-CPW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -266,6 +268,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1d-vN-emW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="1745.577211394303"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="O7U-Qn-BPd">
+            <objects>
+                <viewController id="wbW-Xr-5D5" customClass="PhotoDetailViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1DD-Ng-fFf"/>
+                        <viewControllerLayoutGuide type="bottom" id="bn4-qd-Tg2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6Y-IM-vbw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2s5-Wh-nD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="2525"/>
         </scene>
         <!--Add Caption View Controller-->
         <scene sceneID="5X3-s5-gac">
