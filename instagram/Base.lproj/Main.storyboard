@@ -99,7 +99,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="508.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fKE-B1-PB4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fKE-B1-PB4" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="34" width="375" height="342"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -130,7 +130,7 @@
                                             <outlet property="abovePhotoProfileName" destination="bfG-lW-1m1" id="ydO-4a-ftR"/>
                                             <outlet property="belowPhotoProfileName" destination="0C0-n5-SCZ" id="NiO-sy-1CX"/>
                                             <outlet property="feedCaption" destination="s2X-zo-evI" id="Lht-cs-eqd"/>
-                                            <outlet property="feedPhoto" destination="fKE-B1-PB4" id="y3t-bf-OM8"/>
+                                            <outlet property="feedPhoto" destination="fKE-B1-PB4" id="oGx-46-oWd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

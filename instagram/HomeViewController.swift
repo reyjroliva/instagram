@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 class HomeViewController: UIViewController, UITableViewDataSource {
 
@@ -33,12 +34,44 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedPostCell", for: indexPath) as! feedPostCell
         
+        let post = posts[indexPath.row]
+        let caption = post["caption"] as! String
+        let author = post["author"] as! PFUser
+        let media = post["media"] as! PFFile
+        cell.feedCaption.text = caption
+        cell.abovePhotoProfileName.text = author.username
+        cell.belowPhotoProfileName.text = author.username
+        cell.feedPhoto.file = media
+        cell.feedPhoto.loadInBackground()
+        
         return cell
+    }
+    
+    func fetchPosts() {
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        //fetch data asychronously
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let posts = posts {
+                self.posts = posts
+                self.tableView.reloadData()
+                //do something with the array of objects returnedby the call
+//                for post in posts {
+//                    //access the object as a dictionary and cast type
+//                    let likeCount  = post["likesCount"] as? Int
+//                }
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchPosts()
         tableView.dataSource = self
         tableView.delegate = self as? UITableViewDelegate
         // Do any additional setup after loading the view.

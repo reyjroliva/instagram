@@ -23,6 +23,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func usePost(_ sender: Any) {
         Post.postUserImage(image: photoToPost.image, withCaption: addCaptionTextField.text, withCompletion: nil)
+        
     }
     
     override func viewDidLoad() {

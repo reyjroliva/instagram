@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import ParseUI
+import Parse
 
 class feedPostCell: UITableViewCell {
 
     @IBOutlet weak var abovePhotoProfileName: UILabel!
-    @IBOutlet weak var feedPhoto: UIImageView!
+    @IBOutlet weak var feedPhoto: PFImageView!
     @IBOutlet weak var belowPhotoProfileName: UILabel!
     @IBOutlet weak var feedCaption: UILabel!
     
