@@ -248,7 +248,6 @@
                                     <color key="titleColor" red="0.97998042740000002" green="0.99996114380000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="useGallery:" destination="t87-Sy-57H" eventType="touchUpInside" id="xaO-xw-YhJ"/>
                                     <action selector="useNext:" destination="t87-Sy-57H" eventType="touchUpInside" id="Fef-uw-eQI"/>
                                 </connections>
                             </button>
@@ -261,7 +260,7 @@
                         <outlet property="useCameraButton" destination="zLE-TA-IdE" id="4Tp-tW-D30"/>
                         <outlet property="useGalleryButton" destination="tXT-aW-gba" id="ScS-0f-UeU"/>
                         <outlet property="useNextButton" destination="hri-u4-08P" id="DO0-8N-Dkd"/>
-                        <segue destination="Gj7-i0-TgU" kind="presentation" identifier="addCommentSegue" id="uxe-Zm-gji"/>
+                        <segue destination="Gj7-i0-TgU" kind="show" identifier="addCommentSegue" id="uxe-Zm-gji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1d-vN-emW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,12 +278,29 @@
                     <view key="view" contentMode="scaleToFill" id="56R-jz-wXB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fed-Ud-UXu">
+                                <rect key="frame" x="149" y="72" width="210" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwT-8Q-Yk3">
+                                <rect key="frame" x="16" y="72" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="addCaptionTextField" destination="fed-Ud-UXu" id="RhO-AR-4kh"/>
+                        <outlet property="photoToPost" destination="XwT-8Q-Yk3" id="icz-R4-TOi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHt-BN-SLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="2526"/>
+            <point key="canvasLocation" x="933.60000000000002" y="2525.4872563718145"/>
         </scene>
         <!--Profile-->
         <scene sceneID="mQf-w7-9Rq">

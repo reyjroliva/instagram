@@ -59,7 +59,7 @@ class MakePostViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func useNext(_ sender: Any) {
         if photoToPost.image != nil {
             self.performSegue(withIdentifier: "addCommentSegue", sender: nil)
-        }
+        } 
     }
     
     override func viewDidLoad() {
@@ -72,6 +72,12 @@ class MakePostViewController: UIViewController, UIImagePickerControllerDelegate,
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as! AddCaptionViewController
+        
+        destinationViewController.image = self.photoToPost.image
     }
     
     

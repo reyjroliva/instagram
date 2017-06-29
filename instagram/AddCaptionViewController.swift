@@ -9,11 +9,23 @@
 import UIKit
 import Parse
 
-class AddCaptionViewController: UIViewController {
-
+class AddCaptionViewController: UIViewController, UITextFieldDelegate {
+    
+    var image: UIImage!
+    @IBOutlet weak var photoToPost: UIImageView!
+    @IBOutlet weak var addCaptionTextField: UITextField! = nil
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        photoToPost.image = image
+        addCaptionTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
