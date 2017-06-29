@@ -14,7 +14,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
     var image: UIImage!
     @IBOutlet weak var photoToPost: UIImageView!
     @IBOutlet weak var addCaptionTextField: UITextField! = nil
-    
+    @IBOutlet weak var usePostButton: UIButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -24,9 +24,10 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         // Do any additional setup after loading the view.
         photoToPost.image = image
         addCaptionTextField.delegate = self
-        // Do any additional setup after loading the view.
+        usePostButton.layer.cornerRadius = 8
     }
 
     override func didReceiveMemoryWarning() {
