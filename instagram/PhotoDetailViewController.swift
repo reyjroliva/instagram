@@ -16,10 +16,11 @@ class PhotoDetailViewController: UIViewController {
     var caption: String = ""
     var author: String = ""
     var media: PFFile?
+    var dateString: String = ""
     @IBOutlet weak var feedPhoto: PFImageView!
     @IBOutlet weak var belowPhotoProfileName: UILabel!
     @IBOutlet weak var feedCaptoin: UITextView!
-    
+    @IBOutlet weak var timestamp: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,13 @@ class PhotoDetailViewController: UIViewController {
         let media = post["media"] as! PFFile
         let author = post["author"] as! PFUser
         let caption = post["caption"] as! String
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss +zzzz"
+        dateFormatter.locale = Locale.init(identifier: "en_GB")
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        if let createdAt = post.createdAt {
+            timestamp.text =  "\(dateFormatter.string(from: createdAt))"
+        }
         feedPhoto.file = media
         feedPhoto.loadInBackground()
         belowPhotoProfileName.text = author.username

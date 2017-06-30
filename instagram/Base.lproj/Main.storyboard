@@ -132,7 +132,7 @@
                                             <outlet property="belowPhotoProfileName" destination="0C0-n5-SCZ" id="NiO-sy-1CX"/>
                                             <outlet property="feedCaption" destination="s2X-zo-evI" id="Lht-cs-eqd"/>
                                             <outlet property="feedPhoto" destination="fKE-B1-PB4" id="oGx-46-oWd"/>
-                                            <segue destination="wbW-Xr-5D5" kind="show" id="Ib8-Vd-CPW"/>
+                                            <segue destination="wbW-Xr-5D5" kind="show" identifier="segueToPhotoDetails" id="Ib8-Vd-CPW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -143,7 +143,7 @@
                     <navigationItem key="navigationItem" title="Instagram" id="XQY-X6-g4C">
                         <barButtonItem key="rightBarButtonItem" style="done" id="b65-dN-ttl">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sjZ-pP-bej">
-                                <rect key="frame" x="16" y="5" width="57" height="34"/>
+                                <rect key="frame" x="302" y="5" width="57" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Logout"/>
@@ -292,13 +292,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimeStamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-uV-nlQ">
-                                <rect key="frame" x="271" y="447" width="88" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" red="0.77011689439999997" green="0.77011689439999997" blue="0.77011689439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="08w-Ug-T0s">
                                 <rect key="frame" x="16" y="476" width="343" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -307,6 +300,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimeStamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-uV-nlQ">
+                                <rect key="frame" x="247" y="447" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" red="0.77011689439999997" green="0.77011689439999997" blue="0.77011689439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -314,6 +314,7 @@
                         <outlet property="belowPhotoProfileName" destination="Fct-uQ-qsV" id="m23-fD-Zb0"/>
                         <outlet property="feedCaptoin" destination="08w-Ug-T0s" id="5UL-0X-jE3"/>
                         <outlet property="feedPhoto" destination="SKH-u0-tR3" id="k9H-lJ-qc6"/>
+                        <outlet property="timestamp" destination="9Ue-uV-nlQ" id="Azg-Sr-jzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2s5-Wh-nD6" userLabel="First Responder" sceneMemberID="firstResponder"/>

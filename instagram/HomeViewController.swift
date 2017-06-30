@@ -11,7 +11,7 @@ import Parse
 import ParseUI
 
 class HomeViewController: UIViewController, UITableViewDataSource {
-
+    
     var posts: [PFObject] = []
     var refreshControl: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
@@ -61,10 +61,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 //do something with the array of objects returnedby the call
-//                for post in posts {
-//                    //access the object as a dictionary and cast type
-//                    let likeCount  = post["likesCount"] as? Int
-//                }
+                //                for post in posts {
+                //                    //access the object as a dictionary and cast type
+                //                    let likeCount  = post["likesCount"] as? Int
+                //                }
             } else {
                 print(error?.localizedDescription as Any)
             }
@@ -77,7 +77,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(HomeViewController.didPullToRefresh(_:)), for: .valueChanged)
@@ -88,31 +88,33 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        if let indexPath = tableView.indexPath(for: cell){
-            let post = posts[indexPath.row]
-            let destinationViewController = segue.destination as! PhotoDetailViewController
-        
-            destinationViewController.post = post
-
-            tableView.deselectRow(at: indexPath, animated: true)
+        if segue.identifier == "segueToPhotoDetails" {
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell){
+                let post = posts[indexPath.row]
+                let destinationViewController = segue.destination as! PhotoDetailViewController
+                
+                destinationViewController.post = post
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
