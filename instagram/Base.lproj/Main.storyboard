@@ -143,7 +143,7 @@
                     <navigationItem key="navigationItem" title="Instagram" id="XQY-X6-g4C">
                         <barButtonItem key="rightBarButtonItem" style="done" id="b65-dN-ttl">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sjZ-pP-bej">
-                                <rect key="frame" x="302" y="5" width="57" height="34"/>
+                                <rect key="frame" x="16" y="5" width="57" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Logout"/>

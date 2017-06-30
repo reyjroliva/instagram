@@ -33,6 +33,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
         photoToPost.image = image
         addCaptionTextView.delegate = self as? UITextViewDelegate
         usePostButton.layer.cornerRadius = 8
+        addCaptionTextView.layer.cornerRadius = 8
     }
 
     override func didReceiveMemoryWarning() {
