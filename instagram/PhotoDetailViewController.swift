@@ -17,6 +17,7 @@ class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var belowPhotoProfileName: UILabel!
     @IBOutlet weak var feedCaptoin: UITextView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
