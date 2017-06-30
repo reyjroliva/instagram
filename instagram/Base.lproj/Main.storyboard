@@ -387,11 +387,11 @@
             </objects>
             <point key="canvasLocation" x="1729" y="902"/>
         </scene>
-        <!--Item-->
+        <!--Post-->
         <scene sceneID="jPD-IY-eVU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XjW-DL-Prv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1oJ-J8-lkb"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="1oJ-J8-lkb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3B-ly-bxZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
