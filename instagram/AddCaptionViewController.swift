@@ -13,7 +13,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
     
     var image: UIImage!
     @IBOutlet weak var photoToPost: UIImageView!
-    @IBOutlet weak var addCaptionTextField: UITextField! = nil
+    @IBOutlet weak var addCaptionTextView: UITextView!
     @IBOutlet weak var usePostButton: UIButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -22,7 +22,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func usePost(_ sender: Any) {
-        Post.postUserImage(image: photoToPost.image, withCaption: addCaptionTextField.text, withCompletion: nil)
+        Post.postUserImage(image: photoToPost.image, withCaption: addCaptionTextView.text, withCompletion: nil)
         
     }
     
@@ -31,7 +31,7 @@ class AddCaptionViewController: UIViewController, UITextFieldDelegate {
         
          // Do any additional setup after loading the view.
         photoToPost.image = image
-        addCaptionTextField.delegate = self
+        addCaptionTextView.delegate = self as? UITextViewDelegate
         usePostButton.layer.cornerRadius = 8
     }
 

@@ -336,15 +336,8 @@
                                 <rect key="frame" x="16" y="72" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fed-Ud-UXu">
-                                <rect key="frame" x="149" y="72" width="210" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5S-Rs-f6m">
-                                <rect key="frame" x="259" y="109" width="100" height="50"/>
+                                <rect key="frame" x="28" y="205" width="100" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.22084645219999999" green="0.55710519820000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -355,11 +348,18 @@
                                     <action selector="usePost:" destination="Gj7-i0-TgU" eventType="touchUpInside" id="ok4-df-Lhb"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kTO-as-pbG">
+                                <rect key="frame" x="149" y="72" width="210" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80835087435233155" green="0.80835087435233155" blue="0.80835087435233155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="addCaptionTextField" destination="fed-Ud-UXu" id="RhO-AR-4kh"/>
+                        <outlet property="addCaptionTextView" destination="kTO-as-pbG" id="FRS-1U-4es"/>
                         <outlet property="photoToPost" destination="XwT-8Q-Yk3" id="icz-R4-TOi"/>
                         <outlet property="usePostButton" destination="u5S-Rs-f6m" id="7U7-XH-LJD"/>
                     </connections>
