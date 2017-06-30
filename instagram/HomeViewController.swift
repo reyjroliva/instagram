@@ -86,6 +86,17 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self as? UITableViewDelegate
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let post = posts[indexPath.row]
+            let destinationViewController = segue.destination as! PhotoDetailViewController
+        
+            destinationViewController.post = [post]
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
