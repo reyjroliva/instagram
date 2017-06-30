@@ -281,7 +281,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-u0-tR3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-u0-tR3" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -313,7 +313,7 @@
                     <connections>
                         <outlet property="belowPhotoProfileName" destination="Fct-uQ-qsV" id="m23-fD-Zb0"/>
                         <outlet property="feedCaptoin" destination="08w-Ug-T0s" id="5UL-0X-jE3"/>
-                        <outlet property="feedPhoto" destination="SKH-u0-tR3" id="TXe-T2-agz"/>
+                        <outlet property="feedPhoto" destination="SKH-u0-tR3" id="k9H-lJ-qc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2s5-Wh-nD6" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -93,7 +93,8 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             let post = posts[indexPath.row]
             let destinationViewController = segue.destination as! PhotoDetailViewController
         
-            destinationViewController.post = [post]
+            destinationViewController.post = post
+
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }

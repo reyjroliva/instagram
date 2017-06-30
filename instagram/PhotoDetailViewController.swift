@@ -12,7 +12,10 @@ import ParseUI
 
 class PhotoDetailViewController: UIViewController {
     
-    var post: [PFObject] = []
+    var post: PFObject!
+    var caption: String = ""
+    var author: String = ""
+    var media: PFFile?
     @IBOutlet weak var feedPhoto: PFImageView!
     @IBOutlet weak var belowPhotoProfileName: UILabel!
     @IBOutlet weak var feedCaptoin: UITextView!
@@ -20,7 +23,15 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let media = post["media"] as! PFFile
+        let author = post["author"] as! PFUser
+        let caption = post["caption"] as! String
+        feedPhoto.file = media
+        feedPhoto.loadInBackground()
+        belowPhotoProfileName.text = author.username
+        feedCaptoin.text = caption
+        
         // Do any additional setup after loading the view.
     }
 
