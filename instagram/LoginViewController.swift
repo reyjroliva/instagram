@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    let gradientLayer = CAGradientLayer()
 
     @IBOutlet weak var usernameField: UITextField! = nil
     @IBOutlet weak var passwordField: UITextField! = nil
@@ -56,6 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         usernameField.delegate = self
         passwordField.delegate = self
