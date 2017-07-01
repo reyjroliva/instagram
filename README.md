@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 - [ ] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs - [ ] for Home Feed and Profile
 - [ ] Add a custom camera using the CameraManager library.
 - [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
-- [ ] Show the username and creation time for each post
+- [x] Show the username and creation time for each post
 Hint: If you use TableView Section Headers to display the the username and creation time, you'll get "sticky headers" - [ ] similar to the actual Instagram app.
 - [ ] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
 - User Profiles:
@@ -42,14 +42,14 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How to go about properly implementing like button that features usernames and leads to their profiles
+2. How to implement following other users
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/0UF2teE.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -63,6 +63,8 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I experienced a challenge when creating the detail veiw for my photos on my app. I was originally trying to pass the individual components of the PFObject (image, caption, etc.) to the photo's detailed view controller before realizing it was better to pass the entire PFObject and then work with its components in the detailed view controller.
 
 ## License
 
